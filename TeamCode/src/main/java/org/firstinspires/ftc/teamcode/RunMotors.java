@@ -28,6 +28,22 @@ public class RunMotors extends OpMode {
         // Right trigger on gamepad1 goes from 0.0 to 1.0
         double triggerPower = gamepad1.right_trigger;
 
+        if (gamepad1.a) {
+            triggerPower = 0.8;
+        }
+
+        if (gamepad1.b) {
+            triggerPower = 1.0;
+        }
+
+        if (gamepad1.x) {
+            triggerPower = 0.7;
+        }
+
+        if (gamepad1.y) {
+            triggerPower = 0.75;
+        }
+
         // Set both launchers to that power
         launcher1.setPower(triggerPower);
         launcher2.setPower(triggerPower);
